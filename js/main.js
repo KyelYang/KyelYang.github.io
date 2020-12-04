@@ -722,7 +722,7 @@ jQuery(document).ready(function ($) {
 		Annie_QueryPostsByTag();
 		Annie_LanguageSet();
 		Annie_ImageLazyLoad();
-		Annie_NiceScroll();
+		//Annie_NiceScroll();
 	})();
 });
 
