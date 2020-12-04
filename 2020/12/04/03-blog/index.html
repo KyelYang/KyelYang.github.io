@@ -334,10 +334,16 @@
 <li><a target="_blank" rel="noopener" href="https://github.com/Sariay/hexo-theme-Annie">hexo-theme-Annie</a></li>
 </ul>
 <h2 id="目前存在的问题"><a href="#目前存在的问题" class="headerlink" title="目前存在的问题"></a>目前存在的问题</h2><ol>
-<li>ios手机端访问博客，滑动屏幕会抖动</li>
+<li>ios手机端访问博客，滑动屏幕会抖动√<blockquote>
+<p>将hexo-theme-Annie/source/js/main.js文件下的Annie_NiceScroll()方法注释掉即可，该方法是优化屏幕滑动功能的，但可能和ios不太兼容，产生抖动bug  </p>
+</blockquote>
+</li>
+<li>顶端字体的阴影调整√<blockquote>
+<p>hexo-theme-Annie/layout/_partial/header.ejs文件的class motto text-shadow-pop-left控制着顶端字体的阴影，对应的css有两个：<br>第一个是hexo-theme-Annie/source/css/_layout/header.styl文件，该文件控制着顶端的字体及布局；<br>第二个是hexo-theme-Annie/source/css/_component/animation.styl文件，控制着预加载和字体阴影的动画效果。</p>
+</blockquote>
+</li>
 <li>手机端界面太丑，毫无优化——主要是图片大小不适用手机屏幕</li>
 <li>访问速度较慢</li>
-<li>顶端字体的阴影调整</li>
 <li>分页文章数目设置</li>
 </ol>
 	
