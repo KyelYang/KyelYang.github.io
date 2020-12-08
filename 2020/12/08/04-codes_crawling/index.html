@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      博客相关记录 | Have a nice day :)
+      【爬虫】使用python爬取github上的代码 | Have a nice day :)
     
   </title>
   <meta name="author" content="Kyle Yang">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「博客相关记录」
+			「【爬虫】使用python爬取github上的代码」
 		
 	</p>
 
@@ -246,8 +246,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2020/12/04/03-blog/" itemprop="url">
-		博客相关记录
+	<a href="/2020/12/08/04-codes_crawling/" itemprop="url">
+		【爬虫】使用python爬取github上的代码
 	</a>
 
 		</div>
@@ -263,9 +263,9 @@
 
 	更新于
 
-	<a href="/2020/12/04/03-blog/" itemprop="url">
-		<time datetime="2020-12-04T02:33:00.000Z" itemprop="dateUpdated">
-	  		2020-12-05
+	<a href="/2020/12/08/04-codes_crawling/" itemprop="url">
+		<time datetime="2020-12-08T02:33:00.000Z" itemprop="dateUpdated">
+	  		2020-12-08
 	  </time>
 	</a> 
 
@@ -286,7 +286,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2020/12/04/03-blog/_visitors" data-url="/2020/12/04/03-blog/" data-title="博客相关记录">
+    <span class="leancloud_visitors" id="/2020/12/08/04-codes_crawling/_visitors" data-url="/2020/12/08/04-codes_crawling/" data-title="【爬虫】使用python爬取github上的代码">
        	<i class="icon-eye"></i>
        	热度
         
@@ -298,7 +298,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2020/12/04/03-blog/_likes" data-url="/2020/12/04/03-blog/" data-title="博客相关记录" rel="unlike">
+    <span class="leancloud_likes" id="/2020/12/08/04-codes_crawling/_likes" data-url="/2020/12/08/04-codes_crawling/" data-title="【爬虫】使用python爬取github上的代码" rel="unlike">
         <i class="icon-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -308,48 +308,32 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h2 id="cdn加速为什么使用腾讯云"><a href="#cdn加速为什么使用腾讯云" class="headerlink" title="cdn加速为什么使用腾讯云"></a>cdn加速为什么使用腾讯云</h2><ol>
-<li>域名没有备案，其他云服务无法提供cdn</li>
-<li>尽管七牛云可以提供测试域名，但是有效期只有30天，相当于只能用30天；而腾讯云的测试域名貌似能一直用</li>
-</ol>
-<h2 id="腾讯云cdn、cos"><a href="#腾讯云cdn、cos" class="headerlink" title="腾讯云cdn、cos"></a>腾讯云cdn、cos</h2><ol>
-<li>目前只用腾讯云存储桶存储了博客上的图片而已，后续如果需要继续优化博客访问速度的话，还需要将更多的静态文件存放到存储桶中</li>
-<li>同时访问存储桶中的操作很简单，不知道这样操作是否存在问题。具体操作过程：<blockquote>
-<p>上传图片到存储桶——&gt;将图片的对象地址url复制——&gt;粘贴到配置文件的对应位置</p>
-</blockquote>
-</li>
-<li>不太清楚为什么“外网下行流量”、“内网流量”、“CDN回源流量”全为0，看来是cos加速失败了</li>
-<li>上述问题搜索关键字：hexo如何将腾讯云存储桶中的文件链接到博客<h2 id="cos相关url"><a href="#cos相关url" class="headerlink" title="cos相关url"></a>cos相关url</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://werty.cn/2019/06/hexo/%E8%85%BE%E8%AE%AF%E4%BA%91COS%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E5%AE%9E%E7%8E%B0%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/">一键部署hexo博客到腾讯云COS对象存储</a><ul>
-<li><a target="_blank" rel="noopener" href="http://huanyouchen.github.io/2019/02/26/Move-the-blog-graph-bed-from-Qi-Niuyun-to-Tencent-Cloud/">把博客图床从七牛云迁移到腾讯云</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.julydate.com/post/1756138088/">hexo博客访问优化-COS使用</a></li>
-<li><a target="_blank" rel="noopener" href="https://v2ex.com/t/579567">腾讯云对象存储放了一些博客图片，一个月费用接近 40，正常否？</a></li>
+			<p>最近在做毕设，需要训练一个代码补全的深度学习模型，其中训练模型的数据是python代码，因此需要用爬虫来爬取github上的代码数据。</p>
+<h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><h3 id="确定API"><a href="#确定API" class="headerlink" title="确定API"></a>确定API</h3><p>不同于其他大型网站，github提供了专属的api来用于网站的数据查询和获取，而且没有增加比较复杂的反爬虫机制，因此在爬取github网站上的数据时会非常容易。</p>
+<p>API链接和相关文档如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/en/free-pro-team@latest/rest">GitHub REST API</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35555758">GitHub API v3 概述</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="annie主题详情"><a href="#annie主题详情" class="headerlink" title="annie主题详情"></a>annie主题详情</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://ztygcs.github.io/posts/annie%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">Annie主题详细使用说明</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/Sariay/hexo-theme-Annie">hexo-theme-Annie</a></li>
-</ul>
-<h2 id="目前存在的问题"><a href="#目前存在的问题" class="headerlink" title="目前存在的问题"></a>目前存在的问题</h2><ol>
-<li>ios手机端访问博客，滑动屏幕会抖动√<blockquote>
-<p>将hexo-theme-Annie/source/js/main.js文件下的Annie_NiceScroll()方法注释掉即可，该方法是优化屏幕滑动功能的，但可能和ios不太兼容，产生抖动bug  </p>
+<p>我的任务是根据关键词（比如”tensorflow”）来爬取github仓库中的代码，同时根据仓库的stars数逆序排序结果，可直接可使用相应的v3接口，即可查看api返回的查询结果，例如：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://api.github.com/search/repositories?o=desc&amp;q=tensorflow&amp;sort=stars">https://api.github.com/search/repositories?o=desc&amp;q=tensorflow&amp;sort=stars</a></p>
 </blockquote>
-</li>
-<li>顶端字体的阴影调整√<blockquote>
-<p>hexo-theme-Annie/layout/_partial/header.ejs文件的class motto text-shadow-pop-left控制着顶端字体的阴影，对应的css有两个：<br>第一个是hexo-theme-Annie/source/css/_layout/header.styl文件，该文件控制着顶端的字体及布局；<br>第二个是hexo-theme-Annie/source/css/_component/animation.styl文件，控制着预加载和字体阴影的动画效果。</p>
+<p>默认返回30个仓库的结果，后续如果我想爬取海量的tensorflow代码仓库，直接增加关键字page和pre_page，例如：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://api.github.com/search/repositories?o=desc&amp;q=tensorflow&amp;sort=stars&amp;page=i&amp;pre_page=100">https://api.github.com/search/repositories?o=desc&amp;q=tensorflow&amp;sort=stars&amp;page=i&amp;pre_page=100</a><br>可以根据for循环从1开始更新i的结果，pre_page为每页展示多少个代码仓库，最大设置数为100，在实际爬取过程中，pre_page的值貌似最大才50多。<br>【注】在不理解参数的实际含义时，api参数最好不要写缩写，我当时以为page的缩写是p，在使用过程中一直用的p，导致当时的结果一直有问题，因为在循环过程中p的值一直在变，但是返回的页面结果始终是一样的，我最开始以为是api的问题，也因此被卡了很久，看文档也没找到问题，实际上p貌似没有含义，应该用page!</p>
 </blockquote>
-</li>
-<li>手机端界面太丑，毫无优化——主要是图片大小不适用手机屏幕</li>
-<li>访问速度较慢</li>
-<li>分页文章数目设置</li>
-</ol>
+<h3 id="进行登录验证"><a href="#进行登录验证" class="headerlink" title="进行登录验证"></a>进行登录验证</h3><p>因为github网站的访问限制，所以为了爬取海量的数据，需要先进行登录验证，保存用户session和授权码token，因此这一步骤主要是为了正常登录所进行的一系列参数获取及设置。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">github_crawl</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        初始化一些登录过程中必要的参数。</span></span><br><span class="line"><span class="string">        其中User-Agent为用户代理，用于模拟用户操作行为，防止被网站识别出爬虫行为，进行反爬虫的处理。</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self.login_headers = &#123;</span><br><span class="line">            <span class="string">&quot;Referer&quot;</span>: <span class="string">&quot;https://github.com/&quot;</span>,</span><br><span class="line">            <span class="string">&quot;Host&quot;</span>: <span class="string">&quot;github.com&quot;</span>,</span><br><span class="line">            <span class="string">&quot;User-Agent&quot;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        self.login_url = <span class="string">&quot;https://github.com/login&quot;</span></span><br><span class="line">        self.post_url = <span class="string">&quot;https://github.com/session&quot;</span></span><br><span class="line">        <span class="comment"># 登录成功后，保存session值</span></span><br><span class="line">        self.session = requests.Session()</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse_loginPage</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="comment"># 对登陆页面进行爬取，获取token值</span></span><br><span class="line">        html = self.session.get(url=self.login_url, headers=self.login_headers, verify=<span class="literal">False</span>)</span><br><span class="line">        Soup = BeautifulSoup(html.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">        token = Soup.find(<span class="string">&quot;input&quot;</span>, attrs=&#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;authenticity_token&quot;</span>&#125;).get(<span class="string">&quot;value&quot;</span>)</span><br><span class="line">        <span class="comment"># 返回token值</span></span><br><span class="line">        <span class="keyword">return</span> token</span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_page</span>(<span class="params">self,page_count</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;此处省略爬取过程&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">login</span>(<span class="params">self, user_name, password,page_count</span>):</span></span><br><span class="line">        <span class="comment"># 传进必要的参数，然后进行用户登陆</span></span><br><span class="line">        post_data = &#123;</span><br><span class="line">            <span class="string">&quot;commit&quot;</span>: <span class="string">&quot;Sign in&quot;</span>,</span><br><span class="line">            <span class="string">&quot;utf8&quot;</span>: <span class="string">&quot;✓&quot;</span>,</span><br><span class="line">            <span class="string">&quot;authenticity_token&quot;</span>: self.parse_loginPage(),</span><br><span class="line">            <span class="string">&quot;login&quot;</span>: user_name,</span><br><span class="line">            <span class="string">&quot;password&quot;</span>: password</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        logined_html = self.session.post(url=self.post_url, data=post_data, headers=self.login_headers, verify=<span class="literal">False</span>)</span><br><span class="line">        <span class="keyword">if</span> logined_html.status_code == <span class="number">200</span>:</span><br><span class="line">            self.get_page(page_count)  <span class="comment"># 登录成功，开始爬取数据</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    x = github_crawl()</span><br><span class="line">    x.login(<span class="string">&quot;user_name&quot;</span>, <span class="string">&quot;password&quot;</span>,page_count)</span><br></pre></td></tr></table></figure>
+
+<h3 id="爬取代码仓库"><a href="#爬取代码仓库" class="headerlink" title="爬取代码仓库"></a>爬取代码仓库</h3><p>这一部分才真正涉及到数据爬取的逻辑，由于前述步骤对v3 API有了一定的了解，所以数据爬取过程较为容易。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_page</span>(<span class="params">self,page_count</span>):</span></span><br><span class="line">        page = <span class="number">0</span>    <span class="comment"># page值表示当前爬取的是第几页的代码仓库</span></span><br><span class="line">        count = <span class="number">0</span>   <span class="comment"># count值用来记录已经爬取了多少个代码仓库</span></span><br><span class="line">        <span class="keyword">while</span> page &lt; page_count:    <span class="comment"># 这里可以设置想要爬取的代码页数</span></span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="comment">#由于有些页面不存在items字段，因此会报异常，为了防止程序异常导致中断，此时套用try except</span></span><br><span class="line">                URL=<span class="string">&#x27;https://api.github.com/search/repositories?o=desc&amp;q=tensorflow&amp;sort=stars&amp;page=&#x27;</span> + <span class="built_in">str</span>(page)</span><br><span class="line">                r = requests.get(URL) </span><br><span class="line">                <span class="comment">#print(&quot;Status code:&quot;,r.status_code) </span></span><br><span class="line">                response_dict = r.json() </span><br><span class="line">                <span class="comment">#print(&quot;Total repositories:&quot;,response_dict[&#x27;total_count&#x27;]) </span></span><br><span class="line">                <span class="comment">#print(response_dict)</span></span><br><span class="line">                print(<span class="string">&quot;----------------page: &quot;</span> + <span class="built_in">str</span>(page) + <span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">                repo_dicts = response_dict[<span class="string">&#x27;items&#x27;</span>] </span><br><span class="line">                <span class="keyword">for</span> repo_dict <span class="keyword">in</span> repo_dicts: </span><br><span class="line">                    <span class="keyword">try</span>:</span><br><span class="line">                        <span class="comment"># 防止下述字段为空，导致异常，所以套用try except</span></span><br><span class="line">                        print(<span class="string">&quot;name: &quot;</span> + repo_dict[<span class="string">&#x27;name&#x27;</span>] + <span class="string">&quot;\t&quot;</span> + <span class="string">&quot;stars: &quot;</span> + <span class="built_in">str</span>(repo_dict[<span class="string">&#x27;stargazers_count&#x27;</span>]))</span><br><span class="line">                        count += <span class="number">1</span></span><br><span class="line">                    <span class="keyword">except</span>:</span><br><span class="line">                        <span class="keyword">pass</span></span><br><span class="line">                page += <span class="number">1</span></span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                    <span class="keyword">pass</span></span><br><span class="line">        print(count)</span><br></pre></td></tr></table></figure>
+
+<h3 id="整理爬取下来的代码仓库"><a href="#整理爬取下来的代码仓库" class="headerlink" title="整理爬取下来的代码仓库"></a>整理爬取下来的代码仓库</h3><p>后面再补充</p>
 	
 		</div>
 		
-		<div id="current-post-cover" data-scr="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/04.jpg"></div>
+		<div id="current-post-cover" data-scr="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/07.jpg"></div>
 
 		<!-- relate post, comment...-->
 		<div class="investment-container">
@@ -364,12 +348,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2020/12/08/04-codes_crawling/" title="【爬虫】使用python爬取github上的代码" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2020/11/30/02-12todolist/" title="12月计划" rel="next">
+			<a href="/2020/12/04/03-blog/" title="博客相关记录" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -390,23 +370,27 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/12/08/04-codes_crawling/" title="【爬虫】使用python爬取github上的代码">
-								【爬虫】使用python爬取github上的代码			
+							<a class="relate-post-title" href="/2020/12/04/03-blog/" title="博客相关记录">
+								博客相关记录			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十二月 8日, 2020				
+								十二月 4日, 2020				
 							</p>
 							<p class="relate-post-content">
-								最近在做毕设，需要训练一个代码补全的深度学习模型，其中训练模型的数据是python代码，因此需要用爬虫来爬取github上的代码数据。
-整体思路确定API不同于其他大型网站，github提供了专属的api来用于网站的数据查询和获取，而...
+								cdn加速为什么使用腾讯云
+域名没有备案，其他云服务无法提供cdn
+尽管七牛云可以提供测试域名，但是有效期只有30天，相当于只能用30天；而腾讯云的测试域名貌似能一直用
+
+腾讯云cdn、cos
+目前只用腾讯云存储桶存储了博客上的图片而...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2020/12/08/04-codes_crawling/" title="【爬虫】使用python爬取github上的代码">				
+							<a href="/2020/12/04/03-blog/" title="博客相关记录">				
 								
-								<img class="lazy" src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/lazy.gif" data-src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/07.jpg" alt="【爬虫】使用python爬取github上的代码"/>
+								<img class="lazy" src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/lazy.gif" data-src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/04.jpg" alt="博客相关记录"/>
 							</a>
 						</div>
 					</li>												
