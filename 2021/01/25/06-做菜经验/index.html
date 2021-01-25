@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      博客相关记录 | Have a nice day :)
+      做菜记录 | Have a nice day :)
     
   </title>
   <meta name="author" content="Kyle Yang">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「博客相关记录」
+			「做菜记录」
 		
 	</p>
 
@@ -246,8 +246,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2020/12/04/03-blog/" itemprop="url">
-		博客相关记录
+	<a href="/2021/01/25/06-%E5%81%9A%E8%8F%9C%E7%BB%8F%E9%AA%8C/" itemprop="url">
+		做菜记录
 	</a>
 
 		</div>
@@ -263,9 +263,9 @@
 
 	更新于
 
-	<a href="/2020/12/04/03-blog/" itemprop="url">
-		<time datetime="2020-12-04T02:33:00.000Z" itemprop="dateUpdated">
-	  		2020-12-05
+	<a href="/2021/01/25/06-%E5%81%9A%E8%8F%9C%E7%BB%8F%E9%AA%8C/" itemprop="url">
+		<time datetime="2021-01-25T13:50:00.000Z" itemprop="dateUpdated">
+	  		2021-01-25
 	  </time>
 	</a> 
 
@@ -276,8 +276,8 @@
 				
 	<i class="icon-price-tags"></i>
 	
-		<a href="/tags/%E6%8A%80%E6%9C%AF/" class=" ">
-			技术
+		<a href="/tags/%E6%97%A5%E5%B8%B8/" class=" ">
+			日常
 		</a>
 	
 		
@@ -286,7 +286,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2020/12/04/03-blog/_visitors" data-url="/2020/12/04/03-blog/" data-title="博客相关记录">
+    <span class="leancloud_visitors" id="/2021/01/25/06-%E5%81%9A%E8%8F%9C%E7%BB%8F%E9%AA%8C/_visitors" data-url="/2021/01/25/06-%E5%81%9A%E8%8F%9C%E7%BB%8F%E9%AA%8C/" data-title="做菜记录">
        	<i class="icon-eye"></i>
        	热度
         
@@ -298,7 +298,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2020/12/04/03-blog/_likes" data-url="/2020/12/04/03-blog/" data-title="博客相关记录" rel="unlike">
+    <span class="leancloud_likes" id="/2021/01/25/06-%E5%81%9A%E8%8F%9C%E7%BB%8F%E9%AA%8C/_likes" data-url="/2021/01/25/06-%E5%81%9A%E8%8F%9C%E7%BB%8F%E9%AA%8C/" data-title="做菜记录" rel="unlike">
         <i class="icon-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -308,48 +308,53 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h2 id="cdn加速为什么使用腾讯云"><a href="#cdn加速为什么使用腾讯云" class="headerlink" title="cdn加速为什么使用腾讯云"></a>cdn加速为什么使用腾讯云</h2><ol>
-<li>域名没有备案，其他云服务无法提供cdn</li>
-<li>尽管七牛云可以提供测试域名，但是有效期只有30天，相当于只能用30天；而腾讯云的测试域名貌似能一直用</li>
-</ol>
-<h2 id="腾讯云cdn、cos"><a href="#腾讯云cdn、cos" class="headerlink" title="腾讯云cdn、cos"></a>腾讯云cdn、cos</h2><ol>
-<li>目前只用腾讯云存储桶存储了博客上的图片而已，后续如果需要继续优化博客访问速度的话，还需要将更多的静态文件存放到存储桶中</li>
-<li>同时访问存储桶中的操作很简单，不知道这样操作是否存在问题。具体操作过程：<blockquote>
-<p>上传图片到存储桶——&gt;将图片的对象地址url复制——&gt;粘贴到配置文件的对应位置</p>
-</blockquote>
-</li>
-<li>不太清楚为什么“外网下行流量”、“内网流量”、“CDN回源流量”全为0，看来是cos加速失败了</li>
-<li>上述问题搜索关键字：hexo如何将腾讯云存储桶中的文件链接到博客<h2 id="cos相关url"><a href="#cos相关url" class="headerlink" title="cos相关url"></a>cos相关url</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://werty.cn/2019/06/hexo/%E8%85%BE%E8%AE%AF%E4%BA%91COS%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E5%AE%9E%E7%8E%B0%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/">一键部署hexo博客到腾讯云COS对象存储</a><ul>
-<li><a target="_blank" rel="noopener" href="http://huanyouchen.github.io/2019/02/26/Move-the-blog-graph-bed-from-Qi-Niuyun-to-Tencent-Cloud/">把博客图床从七牛云迁移到腾讯云</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.julydate.com/post/1756138088/">hexo博客访问优化-COS使用</a></li>
-<li><a target="_blank" rel="noopener" href="https://v2ex.com/t/579567">腾讯云对象存储放了一些博客图片，一个月费用接近 40，正常否？</a></li>
+			<h3 id="红烧肉"><a href="#红烧肉" class="headerlink" title="红烧肉"></a>红烧肉</h3><p>红烧肉制作的时间较长，需要大概2小时，因此做的时候，最好把握好时间点。<br>为了不让红烧肉感觉很腻，最好买五花肉的时候尽量不要太肥，同时step3的煎肉过程更久一些会比较好。</p>
+<h4 id="step1-切肉"><a href="#step1-切肉" class="headerlink" title="step1: 切肉"></a>step1: 切肉</h4><ul>
+<li>肉类选择五花肉</li>
+<li>先挂掉猪皮上的毛</li>
+<li>将肉切成块状大小（比麻将稍大点）<h4 id="step2-热水过滤：为了过滤掉肉中的杂质和猪血"><a href="#step2-热水过滤：为了过滤掉肉中的杂质和猪血" class="headerlink" title="step2: 热水过滤：为了过滤掉肉中的杂质和猪血"></a>step2: 热水过滤：为了过滤掉肉中的杂质和猪血</h4></li>
+<li>将锅中倒入水，然后倒入切好的五花肉</li>
+<li>加入2-3片姜片，加一勺料酒（为了去腥）</li>
+<li>在热锅中煮几分钟，能肉眼看到五花肉中的杂质浮在水面</li>
+<li>将水面杂质过滤掉，将过滤好的五花肉盛到盘中，再用冷水清洗1-2遍<h4 id="step3-煎五花肉：将五花肉中的肥油煎出，为了肥而不腻的口感"><a href="#step3-煎五花肉：将五花肉中的肥油煎出，为了肥而不腻的口感" class="headerlink" title="step3: 煎五花肉：将五花肉中的肥油煎出，为了肥而不腻的口感"></a>step3: 煎五花肉：将五花肉中的肥油煎出，为了肥而不腻的口感</h4></li>
+<li>在锅中加入一勺油，待油温小沸腾</li>
+<li>加入干净的五花肉块</li>
+<li>在锅中展开，用筷子反复反转肉块，待五花肉表皮呈金黄</li>
+<li>如果五花肉比较肥的话，这个过程得比较久，目的是让肥肉中的肥油都煎出来</li>
+<li>煎的过程中会炸油，要小心</li>
+<li>煎的差不多了，先把五花肉捞出，剩下炸出的油盛出来，可以做其他的菜<h4 id="step4-翻炒入味"><a href="#step4-翻炒入味" class="headerlink" title="step4: 翻炒入味"></a>step4: 翻炒入味</h4></li>
+<li>在锅中加入一勺油，待油温小沸腾</li>
+<li>在锅中加入1-2勺冰糖，反复翻炒，等到冰糖和油完全混合成暗红色的液体</li>
+<li>倒入煎好的五花肉进行翻炒</li>
+<li>倒入各种辅料：生姜、八角、（辣椒）、生抽<h4 id="step5-中火焖40分钟"><a href="#step5-中火焖40分钟" class="headerlink" title="step5: 中火焖40分钟"></a>step5: 中火焖40分钟</h4></li>
+<li>焖的过程中需要加入蒜块、盐、老抽<h4 id="step6-大火收汁，收工完成"><a href="#step6-大火收汁，收工完成" class="headerlink" title="step6: 大火收汁，收工完成"></a>step6: 大火收汁，收工完成</h4></li>
 </ul>
-</li>
+<h3 id="02-酸辣土豆丝"><a href="#02-酸辣土豆丝" class="headerlink" title="02.酸辣土豆丝"></a>02.酸辣土豆丝</h3><h4 id="step1-洗土豆，切土豆"><a href="#step1-洗土豆，切土豆" class="headerlink" title="step1: 洗土豆，切土豆"></a>step1: 洗土豆，切土豆</h4><ul>
+<li>一个大土豆就能炒一盘土豆丝</li>
+<li>洗完土豆后开始切，先将土豆切成片，再叠起来切丝，切块的时候一定要均匀，不然后续切丝会很麻烦</li>
+<li>切土豆丝有个小技巧，先将土豆的底部切平，底部稳了切块会顺手很多<h4 id="step2-洗土豆丝，热水冷水过滤土豆丝"><a href="#step2-洗土豆丝，热水冷水过滤土豆丝" class="headerlink" title="step2: 洗土豆丝，热水冷水过滤土豆丝"></a>step2: 洗土豆丝，热水冷水过滤土豆丝</h4></li>
+<li>切完后一定要洗土豆丝，目的是将土豆丝中的淀粉洗掉</li>
+<li>先用热水锅煮一下土豆丝（3-5分钟），再用冷水冲一下土豆丝，经过这个过程后，土豆丝会变得非常脆<h4 id="step3-翻炒"><a href="#step3-翻炒" class="headerlink" title="step3: 翻炒"></a>step3: 翻炒</h4></li>
+<li>锅底加油，待油温小沸腾</li>
+<li>加入辣椒、加入切好的少许葱姜蒜，翻炒；炒香了以后再加入半勺生抽</li>
+<li>待味道出来后，加入土豆丝翻炒，中途再加点盐</li>
+<li>这个时候如果还要加肉丝青菜之类的也可以加</li>
+<li>如果要炒酸辣土豆丝，上述过程还需要加醋</li>
 </ul>
-</li>
-</ol>
-<h2 id="annie主题详情"><a href="#annie主题详情" class="headerlink" title="annie主题详情"></a>annie主题详情</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://ztygcs.github.io/posts/annie%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">Annie主题详细使用说明</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/Sariay/hexo-theme-Annie">hexo-theme-Annie</a></li>
+<h3 id="01-蛋炒饭"><a href="#01-蛋炒饭" class="headerlink" title="01.蛋炒饭"></a>01.蛋炒饭</h3><p>需要隔夜的米饭，如果实在没有隔夜的米饭，可以蒸十分硬的米饭用来做蛋炒饭，总之米饭得硬。</p>
+<h4 id="step1-打鸡蛋，炒鸡蛋"><a href="#step1-打鸡蛋，炒鸡蛋" class="headerlink" title="step1: 打鸡蛋，炒鸡蛋"></a>step1: 打鸡蛋，炒鸡蛋</h4><ul>
+<li>先用小碗打一个鸡蛋，然蛋黄均匀</li>
+<li>锅底加油，待油温小沸腾，匀速倒入打好的鸡蛋，边倒边用锅铲接住并在锅中打转，速度尽量快</li>
+<li>待鸡蛋变黄且成碎块状，用小碗盛出来<h4 id="step2-开始炒饭"><a href="#step2-开始炒饭" class="headerlink" title="step2: 开始炒饭"></a>step2: 开始炒饭</h4></li>
+<li>锅底加油，待油温小沸腾，倒入米饭，开始炒饭</li>
+<li>中途倒入炒好的鸡蛋，炒的过程中加入盐、生抽</li>
+<li>最后再加入切好的葱花和火腿肠即可</li>
 </ul>
-<h2 id="目前存在的问题"><a href="#目前存在的问题" class="headerlink" title="目前存在的问题"></a>目前存在的问题</h2><ol>
-<li>ios手机端访问博客，滑动屏幕会抖动√<blockquote>
-<p>将hexo-theme-Annie/source/js/main.js文件下的Annie_NiceScroll()方法注释掉即可，该方法是优化屏幕滑动功能的，但可能和ios不太兼容，产生抖动bug  </p>
-</blockquote>
-</li>
-<li>顶端字体的阴影调整√<blockquote>
-<p>hexo-theme-Annie/layout/_partial/header.ejs文件的class motto text-shadow-pop-left控制着顶端字体的阴影，对应的css有两个：<br>第一个是hexo-theme-Annie/source/css/_layout/header.styl文件，该文件控制着顶端的字体及布局；<br>第二个是hexo-theme-Annie/source/css/_component/animation.styl文件，控制着预加载和字体阴影的动画效果。</p>
-</blockquote>
-</li>
-<li>手机端界面太丑，毫无优化——主要是图片大小不适用手机屏幕</li>
-<li>访问速度较慢</li>
-<li>分页文章数目设置</li>
-</ol>
+<p>&nbsp;<br>&nbsp;</p>
 	
 		</div>
 		
-		<div id="current-post-cover" data-scr="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/04.jpg"></div>
+		<div id="current-post-cover" data-scr="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/10.jpg"></div>
 
 		<!-- relate post, comment...-->
 		<div class="investment-container">
@@ -364,12 +369,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2020/12/08/04-codes_crawling/" title="【爬虫】使用python爬取github上的代码" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2020/11/30/02-12todolist/" title="12月计划" rel="next">
+			<a href="/2020/12/08/05-diary/" title="随记" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -387,55 +388,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/12/08/04-codes_crawling/" title="【爬虫】使用python爬取github上的代码">
-								【爬虫】使用python爬取github上的代码			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 8日, 2020				
-							</p>
-							<p class="relate-post-content">
-								最近在做毕设，需要训练一个代码补全的深度学习模型，其中训练模型的数据是python代码，因此需要用爬虫来爬取github上的代码数据。
-整体思路确定API不同于其他大型网站，github提供了专属的api来用于网站的数据查询和获取，而...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2020/12/08/04-codes_crawling/" title="【爬虫】使用python爬取github上的代码">				
-								
-								<img class="lazy" src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/lazy.gif" data-src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/07.jpg" alt="【爬虫】使用python爬取github上的代码"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2021/01/25/06-%E5%81%9A%E8%8F%9C%E7%BB%8F%E9%AA%8C/" title="做菜记录">
-								做菜记录			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								一月 25日, 2021				
-							</p>
-							<p class="relate-post-content">
-								红烧肉红烧肉制作的时间较长，需要大概2小时，因此做的时候，最好把握好时间点。为了不让红烧肉感觉很腻，最好买五花肉的时候尽量不要太肥，同时step3的煎肉过程更久一些会比较好。
-step1: 切肉
-肉类选择五花肉
-先挂掉猪皮上的毛
-将肉...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2021/01/25/06-%E5%81%9A%E8%8F%9C%E7%BB%8F%E9%AA%8C/" title="做菜记录">				
-								
-								<img class="lazy" src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/lazy.gif" data-src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/10.jpg" alt="做菜记录"/>
-							</a>
-						</div>
-					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -460,6 +412,51 @@ step1: 切肉
 							<a href="/2020/12/08/05-diary/" title="随记">				
 								
 								<img class="lazy" src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/lazy.gif" data-src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/08.jpg" alt="随记"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/25/01-first_page/" title="今天，小破网站又开张啦">
+								今天，小破网站又开张啦			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 25日, 2020				
+							</p>
+							<p class="relate-post-content">
+								我平常是一个喜欢观察喜欢思考的人，也因此想法/思考/感悟会比较多，很多时候都想把随时而来的idea记录下来，但又苦于没有养成写字的习惯，很是无奈。仔细回想为什么没有养成码字的习惯呢，我觉得主要有以下两个原因：&emsp;&emsp;①...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/25/01-first_page/" title="今天，小破网站又开张啦">				
+								
+								<img class="lazy" src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/lazy.gif" data-src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/06.jpg" alt="今天，小破网站又开张啦"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/12/08/04-codes_crawling/" title="【爬虫】使用python爬取github上的代码">
+								【爬虫】使用python爬取github上的代码			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十二月 8日, 2020				
+							</p>
+							<p class="relate-post-content">
+								最近在做毕设，需要训练一个代码补全的深度学习模型，其中训练模型的数据是python代码，因此需要用爬虫来爬取github上的代码数据。
+整体思路确定API不同于其他大型网站，github提供了专属的api来用于网站的数据查询和获取，而...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/12/08/04-codes_crawling/" title="【爬虫】使用python爬取github上的代码">				
+								
+								<img class="lazy" src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/lazy.gif" data-src="https://kyleyang-1258741365.cos.ap-beijing.myqcloud.com/img/cart_cover/07.jpg" alt="【爬虫】使用python爬取github上的代码"/>
 							</a>
 						</div>
 					</li>												
